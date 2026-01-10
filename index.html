@@ -2,57 +2,256 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Eesa Abid | Software Engineer</title>
+  <title>Eesa Abid - Engineering Manager | Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 40px;
-      line-height: 1.6;
-    }
-    h1, h2 {
+      background: linear-gradient(120deg, #f8fafc 0%, #ece9f7 100%);
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
       color: #333;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
-    a {
-      color: #0066cc;
-      text-decoration: none;
+
+    .container {
+      max-width: 780px;
+      background: #fff;
+      box-shadow: 0 6px 30px rgba(50, 50, 93, 0.16);
+      margin: 60px auto 30px auto;
+      border-radius: 14px;
+      overflow: hidden;
+      padding: 2rem 2.5rem;
+      animation: slideDown 1s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-80px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 1.3rem;
+      margin-bottom: 1.2rem;
+      animation: fadeIn 1.2s .4s backwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0;}
+      to { opacity: 1; }
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      color: #433bad;
+      letter-spacing: 1px;
+      animation: fadeInScale 1.1s .3s backwards;
+    }
+
+    @keyframes fadeInScale {
+      from { transform: scale(0.92); opacity:0; }
+      to { transform: scale(1); opacity:1; }
+    }
+
+    .title {
+      font-weight: 600;
+      color: #6066d5;
+      font-size: 1.3rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .contact {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .section {
+      margin-bottom: 2.4rem;
+      animation: sectionUp .8s;
+    }
+
+    @keyframes sectionUp {
+      0% { opacity: 0; transform: translateY(60px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+
+    .section h2 {
+      color: #605af7;
+      font-size: 1.3rem;
+      border-left: 4px solid #605af7;
+      padding-left: 0.7rem;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+    }
+
+    .item {
+      margin-bottom: 1.3rem;
+      position: relative;
+      animation: fadeInItem 0.9s;
+    }
+
+    @keyframes fadeInItem {
+      from { opacity: 0; transform: translateX(-30px);}
+      to { opacity: 1; transform: translateX(0);}
+    }
+
+    .item-title {
+      font-weight: bold;
+      color: #433bad;
+      font-size: 1.13rem;
+      margin-bottom: 0.13rem;
+    }
+
+    .item-date {
+      color: #a5a3bb;
+      font-size: 0.96rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .item-desc {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #414042;
+    }
+
+    .skills-list, .edu-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      margin-top: 0.7rem;
+    }
+    .skill, .edu-item {
+      background: linear-gradient(90deg, #efecff 0%, #e3eafe 100%);
+      padding: 0.45em 1.1em;
+      border-radius: 1.4em;
+      font-size: 1rem;
+      color: #604acf;
+      box-shadow: 0 2px 6px rgba(96,90,207,0.09);
+      transition: transform .21s cubic-bezier(.77,.2,.05,1);
+      cursor: pointer;
+      animation: floatSkill .7s;
+    }
+    .skill:hover,
+    .edu-item:hover {
+      transform: scale(1.09) translateY(-3px);
+      background: linear-gradient(90deg, #d9e8fa 0%, #d3d0ff 100%);
+    }
+
+    @keyframes floatSkill {
+      0% {opacity:0; transform:translateY(18px);}
+      100% {opacity:1; transform:translateY(0);}
+    }
+
+    .footer {
+      text-align: center;
+      color: #b6b5cd;
+      font-size: 0.97rem;
+      padding: 1.5rem 0 0.4rem 0;
+      margin-top: 1.2rem;
+      border-top: 1px solid #ece9f7;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 630px) {
+      .container { padding: 1.3rem 0.6rem;}
+      .header h1 { font-size: 1.5rem; }
+      .section h2 { font-size: 1rem;}
+      .item-title { font-size: 1rem;}
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <section class="header">
+      <h1>Eesa Abid</h1>
+      <div class="title">Engineering Manager / Senior Software Engineer</div>
+      <div class="contact">
+        Abu Dhabi, UAE ·
+        <a href="https://www.toptal.com/resume/eesa-abid" style="color:#605af7;text-decoration:none;" target="_blank">toptal.com/resume/eesa-abid</a>
+      </div>
+    </section>
 
-<h1>Eesa Abid</h1>
-<p>
-  Software Engineer · Engineering Manager  
-  <br>
-  📍 Dubai, UAE  
-  <br>
-  <a href="mailto:your@email.com">your@email.com</a> |
-  <a href="https://github.com/yourusername">GitHub</a> |
-  <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-</p>
+    <section class="section" style="animation-delay:0.3s;">
+      <h2>Professional Summary</h2>
+      <div class="item-desc">
+        Accomplished Engineering Manager and Senior Software Engineer with over 4 years of hands-on experience, currently leading technical teams at <strong>Alef Education</strong>. Known for driving impactful projects, mentoring engineers, and delivering robust software solutions—especially around document management integrations and cloud platform innovations. Recognized for academic excellence and collaborative leadership.
+      </div>
+    </section>
 
-<h2>Summary</h2>
-<p>
-Engineering Manager with strong backend experience in NestJS, MySQL,
-and scalable systems. Passionate about clean architecture and mentoring teams.
-</p>
+    <section class="section" style="animation-delay:.44s;">
+      <h2>Experience</h2>
+      <div class="item">
+        <div class="item-title">Engineering Manager</div>
+        <div class="item-date">Alef Education, Abu Dhabi · Jul 2017 – Present</div>
+        <div class="item-desc">
+          Leading high-performing engineering teams, mentoring developers, ensuring seamless cross-functional collaboration, and delivering impactful products to empower digital learning at scale.
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-title">Senior Software Engineer</div>
+        <div class="item-date">Toptal · Sep 2022 – Present</div>
+        <div class="item-desc">
+          Delivered integrations of document management systems and business-grade software, including implementing WOPI protocol for MS Office and CIRCULARO integration.
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-title">Software Developer</div>
+        <div class="item-date">Palaxo Technologies, CIRCULARO</div>
+        <div class="item-desc">
+          Contributed to enterprise software solutions, specializing in secure document-handling and complex API integrations.
+        </div>
+      </div>
+    </section>
 
-<h2>Experience</h2>
-<ul>
-  <li>
-    <strong>Engineering Manager</strong> – Company Name  
-    <br>2024 – Present
-    <br>• Led backend team, improved delivery speed and system stability
-  </li>
-</ul>
+    <section class="section" style="animation-delay:.6s;">
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li class="edu-item"><strong>Bachelor of Software Engineering</strong> — International Islamic University, Islamabad <br> <em>Gold Medalist</em></li>
+        <li class="edu-item"><strong>Intermediate in Computer Science</strong> — Fazaia Inter College Kallar Kahar</li>
+      </ul>
+    </section>
 
-<h2>Skills</h2>
-<p>NestJS, Node.js, MySQL, TypeScript, Docker, AWS</p>
+    <section class="section" style="animation-delay:.73s;">
+      <h2>Key Skills</h2>
+      <ul class="skills-list">
+        <li class="skill">Engineering Leadership</li>
+        <li class="skill">Team Mentoring</li>
+        <li class="skill">Cloud Platforms</li>
+        <li class="skill">API Integrations</li>
+        <li class="skill">Document Management</li>
+        <li class="skill">WOPI Protocol</li>
+        <li class="skill">MS Office Integrations</li>
+        <li class="skill">Software Development</li>
+        <li class="skill">Stakeholder Collaboration</li>
+      </ul>
+    </section>
 
-<h2>Education</h2>
-<p>Bachelor’s in Computer Science</p>
+    <section class="section" style="animation-delay:.8s;">
+      <h2>Awards</h2>
+      <div class="item">
+        <div class="item-title">Gold Medal for Academic Excellence</div>
+        <div class="item-desc">
+          Awarded for outstanding performance during Bachelor of Software Engineering at International Islamic University, Islamabad.
+        </div>
+      </div>
+    </section>
 
+    <div class="footer">
+      &copy; 2026 Eesa Abid &mdash; Resume generated for presentation purposes.
+    </div>
+  </div>
 </body>
 </html>
